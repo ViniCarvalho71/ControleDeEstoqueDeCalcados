@@ -15,5 +15,6 @@ namespace ControleDeEstoqueDeCalcados.Models
 
         public int Tamanho { get; set; }
         public int Status { get; set; }
+        public DateTime DataAtualizacao { get; set; }
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControleDeEstoqueDeCalcados")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9acd16aef436e832af4a48a9845d81d17d4ab61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65876cbe057fc3e0683ad7c1ceb2751143be5511")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControleDeEstoqueDeCalcados")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControleDeEstoqueDeCalcados")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

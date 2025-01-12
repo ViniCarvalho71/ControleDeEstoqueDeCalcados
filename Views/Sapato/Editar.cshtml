@@ -1,0 +1,44 @@
+@model ControleDeEstoqueDeCalcados.Models.Sapato;
+
+@{
+    ViewData["Title"] = "Editar Registro";
+}
+
+<h1>Editar Registro</h1>
+
+<hr/>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Editar">
+            <div class="form-group">
+                <label asp-for="Tipo" class="control-label">Tipo</label>
+                <input asp-for="Tipo" class="form-control" type="text"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodBarras" class="control-label">CodBarras</label>
+                <input asp-for="CodBarras" class="form-control" type="text"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cor" class="control-label">Cor</label>
+                <input asp-for="Cor" class="form-control" type="text"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tamanho" class="control-label">Tamanho</label>
+                <input asp-for="Tamanho" class="form-control" type="text"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Preco" class="control-label">Preco</label>
+                <input asp-for="Preco" class="form-control" type="text"/>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Editar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>

@@ -34,6 +34,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/ControleDeEstoqueDeCalcados/Views/Sapato/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FwYXRvXENyaWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ControleDeEstoqueDeCalcados/Views/Sapato/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FwYXRvXEVkaXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ControleDeEstoqueDeCalcados/Views/Sapato/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FwYXRvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/ControleDeEstoqueDeCalcados/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
