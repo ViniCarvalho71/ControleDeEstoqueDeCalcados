@@ -24,8 +24,8 @@
     </thead>
     <tbody>
         @foreach (var item in Model){
-
-            <tr>
+            @if(item.Status == 1){
+                <tr>
                 <td>@Html.DisplayFor(Model => item.CodBarras)</td>
                 <td>@Html.DisplayFor(Model => item.Cor)</td>
                 <td>@Html.DisplayFor(Model => item.Preco)</td>
@@ -33,9 +33,51 @@
                 <td>@Html.DisplayFor(Model => item.DataAtualizacao)</td>
                 <td>
                 <a asp-action="Editar" asp-route-id="@item.Id"  class="btn btn-primary">Editar</a>
-                <a asp-action="Deletar" asp-route-id="@item.Id"  class="btn btn-warning">Baixar do Estoque</a>
+                 <form asp-action="Deletar" asp-controller="Sapato" method="post" style="display:inline;">
+                    <input type="hidden" name="id" value="@item.Id" />
+                    <button type="submit" class="btn btn-warning">Baixar do Estoque</button>
+                </form>
             </td>
             </tr>
+            }
+
+            
+            
+        }
+
+    </tbody>
+</table>
+<br>
+<br>
+<h1>Sapatos baixados</h1>
+<table class="table" id="table-sapatos-baixados">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.CodBarras)</th>
+            <th>@Html.DisplayNameFor(model => model.Cor)</th>
+            <th>@Html.DisplayNameFor(model => model.Preco)</th>
+            <th>@Html.DisplayNameFor(model => model.Tipo)</th>
+            <th>Última Mudança</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model){
+            @if(item.Status == 0){
+                <tr>
+                <td>@Html.DisplayFor(Model => item.CodBarras)</td>
+                <td>@Html.DisplayFor(Model => item.Cor)</td>
+                <td>@Html.DisplayFor(Model => item.Preco)</td>
+                <td>@Html.DisplayFor(Model => item.Tipo)</td>
+                <td>@Html.DisplayFor(Model => item.DataAtualizacao)</td>
+                <td>
+                 <form asp-action="Desfazer" asp-controller="Sapato" method="post" style="display:inline;">
+                    <input type="hidden" name="id" value="@item.Id" />
+                    <button type="submit" class="btn btn-primary">Desfazer</button>
+                </form>
+            </td>
+            </tr>
+            }    
             
         }
 

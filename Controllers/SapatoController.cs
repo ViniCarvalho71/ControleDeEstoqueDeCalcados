@@ -35,11 +35,11 @@ namespace ControleDeEstoqueDeCalcados.Controllers
         }
 
          public IActionResult Editar(int id){
-            var contato = _context.Sapatos.Find(id);
-            if (contato == null){
+            var sapato = _context.Sapatos.Find(id);
+            if (sapato == null){
                 return RedirectToAction(nameof(Index));
             }
-            return View(contato);
+            return View(sapato);
         }
 
         [HttpPost]
@@ -58,6 +58,48 @@ namespace ControleDeEstoqueDeCalcados.Controllers
 
             return RedirectToAction(nameof(Index));
 
+        }
+
+        [HttpPost]
+        public IActionResult Deletar(int id)
+        {
+            // Verifica se o sapato existe no banco de dados
+            var sapatoBanco = _context.Sapatos.Find(id);
+            if (sapatoBanco == null)
+            {
+                TempData["ErrorMessage"] = "Sapato não encontrado!";
+                return RedirectToAction("Index"); // Redireciona para a página principal
+            }
+
+            // Atualiza o status para 0 (baixado do estoque)
+            sapatoBanco.Status = 0;
+            sapatoBanco.DataAtualizacao = DateTime.Now;
+            _context.SaveChanges();
+
+            // Salva uma mensagem de sucesso
+            TempData["SuccessMessage"] = "Sapato baixado do estoque com sucesso!";
+            return RedirectToAction("Index"); // Redireciona para a página principal
+        }
+
+        [HttpPost]
+        public IActionResult Desfazer(int id)
+        {
+            // Verifica se o sapato existe no banco de dados
+            var sapatoBanco = _context.Sapatos.Find(id);
+            if (sapatoBanco == null)
+            {
+                TempData["ErrorMessage"] = "Sapato não encontrado!";
+                return RedirectToAction("Index"); // Redireciona para a página principal
+            }
+
+            // Atualiza o status para 0 (baixado do estoque)
+            sapatoBanco.Status = 1;
+            sapatoBanco.DataAtualizacao = DateTime.Now;
+            _context.SaveChanges();
+
+            // Salva uma mensagem de sucesso
+            TempData["SuccessMessage"] = "Sapato baixado do estoque com sucesso!";
+            return RedirectToAction("Index"); // Redireciona para a página principal
         }
     }
 }
