@@ -17,8 +17,8 @@ namespace ControleDeEstoqueDeCalcados.Controllers
         }
 
         public IActionResult Index(){
-            var sapato = _context.Sapatos.ToList();
-            return View(sapato);
+            var sapatos = _context.Sapatos.ToList();
+            return View(sapatos);
         }
         public IActionResult Criar(){
             return View();

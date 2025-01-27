@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace ControleDeEstoqueDeCalcados.Models
 {
@@ -15,6 +16,7 @@ namespace ControleDeEstoqueDeCalcados.Models
 
         public int Tamanho { get; set; }
         public int Status { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm:ss}", ApplyFormatInEditMode = true)]
         public DateTime DataAtualizacao { get; set; }
     }
 }

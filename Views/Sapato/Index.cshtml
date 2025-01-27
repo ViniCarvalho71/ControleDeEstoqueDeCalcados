@@ -28,7 +28,7 @@
                 <tr>
                 <td>@Html.DisplayFor(Model => item.CodBarras)</td>
                 <td>@Html.DisplayFor(Model => item.Cor)</td>
-                <td>@Html.DisplayFor(Model => item.Preco)</td>
+                <td>@item.Preco.ToString("C", new System.Globalization.CultureInfo("pt-BR"))</td>
                 <td>@Html.DisplayFor(Model => item.Tipo)</td>
                 <td>@Html.DisplayFor(Model => item.DataAtualizacao)</td>
                 <td>
@@ -67,7 +67,7 @@
                 <tr>
                 <td>@Html.DisplayFor(Model => item.CodBarras)</td>
                 <td>@Html.DisplayFor(Model => item.Cor)</td>
-                <td>@Html.DisplayFor(Model => item.Preco)</td>
+                <td>@item.Preco.ToString("C", new System.Globalization.CultureInfo("pt-BR"))</td>
                 <td>@Html.DisplayFor(Model => item.Tipo)</td>
                 <td>@Html.DisplayFor(Model => item.DataAtualizacao)</td>
                 <td>
